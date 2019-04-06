@@ -43,8 +43,6 @@ while True:
 for snack in fruit:
     print(fruit[snack])
 
-
-
 # Nicer way of iterating through the keys & .keys() method
 ordered_keys = list(fruit.keys())
 ordered_keys.sort()
@@ -55,13 +53,25 @@ for f in ordered_keys:
 for f in sorted(ordered_keys):
     print(f + "-" + fruit[f])
 
-
-
-
 # .values() method
 for val in fruit.values():
     print(val)
 
-
 print(fruit.keys())
 print(fruit.values())
+
+# .items() prints out the dictionary as a list of tuples
+print(fruit.items())
+
+#converts to tuple of tuples
+f_tuple = tuple(fruit.items());
+print(f_tuple)
+
+# looping through the tuple
+
+for snack in f_tuple:
+    item, description = snack
+    print(item + " is "+ description)
+
+#converting back to dictionary
+print(dict(f_tuple))
